@@ -1,0 +1,36 @@
+{
+  "name": "hellonodejs",
+  "version": "1.0.0",
+  "description": "Complete NodeJS Guild",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khanhhuy130295/HelloNodeJS.git"
+  },
+  "author": "huy-dhk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khanhhuy130295/HelloNodeJS/issues"
+  },
+  "homepage": "https://github.com/khanhhuy130295/HelloNodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "mongodb": "^3.5.2",
+    "mysql2": "^2.1.0",
+    "popper.js": "^1.16.0",
+    "sequelize": "^5.21.3",
+    "sequelize-cli": "^5.5.1"
+  }
+}
