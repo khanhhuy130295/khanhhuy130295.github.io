@@ -1,29 +1,35 @@
-const express = require("express");
-const _ = require('lodash');
-const fs = require("fs");
-const app = express();
-const bodyParser = require('body-parser');
-const path = require('path');
-const rootDir = require('./util/path');
-const mongo = require('./util/database');
+(function ($) {
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
+    "use strict";
 
-// router
-const shopRouter = require('./routes/shop');
-const adminRouter = require('./routes/admin');
-const errorRouter = require('./controller/error');
+    var fullHeight = function () {
 
+        $('.js-fullheight').css('height', $(window).height());
+        $(window).resize(function () {
+            $('.js-fullheight').css('height', $(window).height());
+        });
 
-//config application
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
-// end config
-app.use('/admin', adminRouter);
-app.use(shopRouter);
-app.use(errorRouter.error404);
+    };
+    fullHeight();
 
-mongo.mongoConnect();
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
 
-app.listen(3000);
+    var btn = $('#btnBackToTop');
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 50) {
+            btn.addClass('show');
+        } else {
+            btn.removeClass('show');
+        }
+    });
+
+    btn.on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop: 0}, '300');
+        return false;
+    });
+
+})(jQuery);
