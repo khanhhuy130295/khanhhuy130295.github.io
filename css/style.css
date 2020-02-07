@@ -35,7 +35,7 @@ body {
   }
   #btnBackToTop::after {
     content: "\f102";
-    font-family: FontAwesome\ 5 Free;
+    font-family: 'FontAwesome\ 5 Free';
     font-weight: normal;
     font-style: normal;
     font-size: 2em;
