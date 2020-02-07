@@ -34,10 +34,9 @@ body {
     z-index: 1000;
   }
   #btnBackToTop::after {
-    content: "\f102";
     font-family: 'FontAwesome\ 5 Free';
+    content: "\f0a6";
     font-weight: 900;
-    font-style: normal;
     font-size: 2em;
     line-height: 50px;
     color: #fff;
